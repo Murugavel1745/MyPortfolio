@@ -252,3 +252,37 @@ button, a { -webkit-tap-highlight-color: transparent; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Custom styling for name in hero section */
+
+.hero-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    margin: 0 0 15px;
+}
+
+.small-intro {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--muted);
+}
+
+.big-name {
+    font-size: 85px;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -3px;
+}
+
+/* Mobile responsive name size */
+@media (max-width: 700px) {
+    .big-name {
+        font-size: clamp(48px, 11vw, 65px);
+        letter-spacing: -2px;
+    }
+
+    .small-intro {
+        font-size: 19px;
+    }
+}
